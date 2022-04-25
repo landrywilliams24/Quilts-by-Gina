@@ -1,18 +1,22 @@
 :root{
-    --blue-gray: #7C99AC; /* primary font color */
-    --light-pink: #EAFFD0; /* hero background color */
-    --light-grey: #D3DEDC;
-    --light-navy: #92A9BD; /* secondary font color */
+    --charcoal: #36454F;
+    --seafoam-green: #9FE2BF;
+    --sky-blue: #87CEEB;
+    --onyx: #353935;
 }
 
 body{
     margin: 0;
     font-family: Helvetica, sans-serif;
     font-size: 1.1rem;
+    color: var(--onyx);
 }
 
 img{
    width: 50vh;
+}
+h1{
+    color: var(--charcoal);
 }
 
 
@@ -20,27 +24,44 @@ img{
     border: solid;
     padding: 1rem;
     border-radius: 12px;
-    border-color: var(--blue-gray);
+    border-color: var(--charcoal);
     font-size: 5rem;
-    color: var(--blue-gray);
     border-width: .1em;
 }
 
 .hero-txt{
-    color: var(--blue-gray);
     flex-basis: 30%;
     font-size: 2em;
+    margin: 0;
 }
 
+.header{
+    display: flex;
+    padding: 0.5em;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--sky-blue);
+}
+
+
+.header-list{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin: 0 1em;
+}
 
 .hero{
     display: flex;
     flex-direction: column;
     height: 100vh;
     padding: 0.5em;
-    background-color: var(--light-pink);
+    background-color: var(--seafoam-green);
     align-items: center;
-    /* background-image: url(./imgs/gpa-quilt.jpg); */
 }
 
 .hero-content{
@@ -48,6 +69,5 @@ img{
     flex-direction: row;
     justify-content: center;
     gap: 5em;
-   
 }
 
