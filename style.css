@@ -3,6 +3,7 @@
     --seafoam-green: #9FE2BF;
     --sky-blue: #87CEEB;
     --onyx: #353935;
+    --platinum: #E5E4E2;
 }
 
 body{
@@ -12,11 +13,17 @@ body{
     color: var(--onyx);
 }
 
-img{
-   width: 50vh;
+.hero img{
+   max-height: 50vh;
 }
-h1{
+
+h1,
+h2{
     color: var(--charcoal);
+}
+
+h2{
+    font-size: 3rem;
 }
 
 
@@ -71,3 +78,31 @@ li{
     gap: 5em;
 }
 
+.fav-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quilt-pics{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.fav-projects img{
+    max-height: 50vh;
+}
+
+.pic{
+    padding: 1em;
+    margin: 1vw;
+    flex-basis: 35%;
+    background-color: var(--platinum);
+
+}
+
+.pic p{
+    padding: 0 5em;
+}
