@@ -16,6 +16,7 @@ body {
 }
 
 .header-logo {
+	padding: 0.5em;
 	color: white;
 }
 
@@ -71,7 +72,7 @@ li {
 	flex-basis: 50%;
 	max-width: 40vh;
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	border-radius: 8px;
 }
 
@@ -89,30 +90,33 @@ li {
 }
 
 .quilt-pics {
-	display: flex;
-	text-align: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	max-width: 1400px;
-	gap: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	max-width: 90%;
+	width: 100%;
+	padding: 0 1rem;
 }
 
 .pic {
-	padding: 1rem;
-	flex-basis: calc(50% - 2rem);
-	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 
 .fav-projects img {
-	max-height: 40vh;
 	width: 100%;
-	object-fit: cover;
+	height: 380px;
+	object-fit: contain;
 	border-radius: 8px;
+	margin-bottom: 1rem;
 }
 
 .pic p {
-	padding: 1 rem 2rem;
+	padding: 0 0.5rem;
 	line-height: 1.4;
+	font-size: 0.95rem;
+	flex-grow: 1;
 }
 
 .cta {
@@ -194,6 +198,37 @@ li {
 		text-align: center;
 		margin: 2rem 1rem;
 		gap: 1rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.quilt-pics {
+		padding: 0 3rem; 
+		gap: 2rem; 
+	}
+}
+
+@media (max-width: 900px) {
+	.quilt-pics {
+		grid-template-columns: repeat(2, 1fr); 
+	}
+	.fav-projects img {
+		height: 320px;
+	}
+}
+
+@media (max-width: 600px) {
+	.quilt-pics {
+		grid-template-columns: 1fr; 
+	}
+	
+	.fav-projects img {
+		height: 280px;
+	}
+	
+	.pic p {
+		font-size: 1rem;
+		padding: 0;
 	}
 }
 
