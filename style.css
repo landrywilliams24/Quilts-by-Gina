@@ -1,8 +1,10 @@
 body {
 	margin: 0;
-	font-family: Helvetica, sans-serif;
+	font-family: Georgia, serif;
 	font-size: 1.1rem;
 	color: black;
+	background: linear-gradient(135deg, #f8fdf8 0%, #ffffff 100%);
+	min-height: 100vh;
 }
 
 .header {
@@ -12,15 +14,16 @@ body {
 	justify-content: space-between;
 	position: sticky;
 	top: 0;
-	background-color: #8FBC8F; 
+	background-color: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
 	box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+	border-bottom: 1px solid rgba(143, 188, 143, 0.3);
 	
 }
 
 .header-logo {
 	padding-left: 0.5em;
 	color: #2F2F2F; /* Dark charcoal grey */
-	font-family: Georgia, serif;
 	text-shadow: 1px 1px 2px rgba(255,255,255,0.3); /* Light shadow for contrast */
 }
 
@@ -46,7 +49,6 @@ li:hover {
 	padding: 4rem 0; 
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(135deg, #f8fdf8 0%, #ffffff 100%);
 	min-height: 60vh;
 }
 
@@ -73,7 +75,6 @@ li:hover {
 	line-height: 1.1;
 	font-weight: bold;
 	color: #2F2F2F;
-	font-family: Georgia, serif;
 }
 
 .hero-txt {
@@ -100,13 +101,14 @@ li:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 3rem 1rem;
+	padding: 4rem 1rem;
 }
 
 .fav-projects h2{
-	font-size: clamp(1.8rem, 5vw, 3rem);
+	font-size: clamp(2rem, 5vw, 3rem);
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
+	color: #2F2F2F;
 }
 
 .quilt-pics {
@@ -122,21 +124,37 @@ li:hover {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 12px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+	transition: all 0.3s ease;
+}
+
+.pic:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 .fav-projects img {
 	width: 100%;
-	height: 380px;
-	object-fit: contain;
+	height: 320px;
+	object-fit: cover;
 	border-radius: 8px;
 	margin-bottom: 1rem;
+	transition: all 0.3s ease;
+}
+
+.pic:hover img {
+	transform: scale(1.02);
 }
 
 .pic p {
 	padding: 0 0.5rem;
-	line-height: 1.4;
+	line-height: 1.5;
 	font-size: 0.95rem;
 	flex-grow: 1;
+	color: #555;
 }
 
 .cta {
@@ -159,7 +177,6 @@ li:hover {
 	font-size: clamp(1.5rem, 4vw, 2.2rem);
 	margin: 0 0 0.5rem 0;
 	color: white;
-	font-family: Georgia, serif;
 }
 
 .cta-text p {
@@ -193,10 +210,11 @@ li:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: black;
+	background-color: rgba(47, 47, 47, 0.95);
 	color: white;
 	padding: 2rem;
 	margin-top: 3rem;
+	border-top: 1px solid rgba(143, 188, 143, 0.3);
 }
 
 @media (min-width: 1400px) {
