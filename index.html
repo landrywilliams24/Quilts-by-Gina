@@ -7,16 +7,16 @@
 		<title>Quilts by Gina</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
+	<body id="top">
 		<div class="header">
 			<div class="header-left">
-				<h1 class="header-logo">Quilts by Gina</h1>
+				<h1 class="header-logo active" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="cursor: pointer;">Quilts by Gina</h1>
 			</div>
 			<div class="header-right">
 				<ul class="header-list">
-					<li>About</li>
-					<li>Pricing</li>
-					<li>Contact Me</li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="pricing.html">Pricing</a></li>
+					<li><a href="#cta">Contact Me</a></li>
 				</ul>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="cta">
+		<div class="cta" id="cta">
 			<div class="cta-text">
 				<h2>Have a project in mind?</h2>
 				<p>Reach out to me and we can make it happen!</p>
